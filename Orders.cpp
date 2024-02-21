@@ -4,10 +4,13 @@
 
 #include "Orders.h"
 
-Orders::Orders(const string &orderId, const Date &orderDate, time_t orderTime) : order_id(orderId),
-                                                                                 order_date(orderDate),
-                                                                                 order_time(orderTime) {}
+Orders::Orders(const string &orderId, const Date &orderDate, time_t orderTime) : order_id(""),
+                                                                                 order_date(Date()),
+                                                                                 order_time(0) {}
 
-Orders::~Orders() {
-
+void Orders::print_order() {
+        cout << "Order ID: " << order_id << endl;
+        cout << "Order Date: " << order_date << endl; // Assuming Date class has a toString() function
+        cout << "Order Time: " << ctime(&order_time); // Convert time_t to string and print
 }
+
