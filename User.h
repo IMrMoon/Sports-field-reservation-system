@@ -37,35 +37,35 @@ public:
     }
 
     const string &getId() const {
-        return Id;
+        return id;
     }
 
     const string &getPassword() const {
-        return Password;
+        return password;
     }
 
     char getGender() const {
-        return Gender;
+        return gender;
     }
 
 void setName(const string &name) {
-    User::name = name;
+    this->name = name;
 }
 
 void setEmail(const string &email) {
-    User::email = email;
+    this->email = email;
 }
 
 void setPhoneNumber(long phoneNumber) {
-    User::phoneNumber = phoneNumber;
+    this->phoneNumber = phoneNumber;
 }
 
 void setPassword(const string &password) {
-    Password = password;
+    this->password = password;
 }
 
 void setGender(char gender) {
-    Gender = gender;
+    this->gender = gender;
 }
 
 };
