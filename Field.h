@@ -15,8 +15,16 @@ private:
     Orders* orders;
     string city;
     float* rates;
+    int numRates;
+    int capacity;
 
 public:
+    virtual ~Field() {
+        delete [] rates;
+    }
+
+    Field(const string &fieldType, long fieldId, const string &city, Orders* orderArr, float* ratesArr, int numRates, int capacity) : fieldType(fieldType), field_id(fieldId),
+                                                                       city(city), orders(nullptr), rates(nullptr), numRates(0), capacity(0) {}
     float* getRate() const {return rates;}
     long getFieldId() const {return field_id;}
     const string &getFieldType() const {return fieldType;}
